@@ -1,0 +1,27 @@
+/* メインコンテンツの背景設定 */
+.main-content {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 16px;
+    padding: 32px;
+    background-image: url('/backimage.JPG');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+  
+  /* コンテンツボックス */
+  .content-box {
+    background-color: rgba(255, 255, 255, 0.7); /* 背景を白の70%透明に */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  /* コンテンツ3はフル幅 */
+  .content-full {
+    grid-column: span 2;
+  }
+  
