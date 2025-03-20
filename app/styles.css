@@ -1,27 +1,133 @@
-/* メインコンテンツの背景設定 */
 .main-content {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    gap: 16px;
-    padding: 32px;
-    background-image: url('/backimage.JPG');
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-  }
-  
-  /* コンテンツボックス */
-  .content-box {
-    background-color: rgba(255, 255, 255, 0.7); /* 背景を白の70%透明に */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    text-align: center;
-  }
-  
-  /* コンテンツ3はフル幅 */
-  .content-full {
-    grid-column: span 2;
-  }
-  
+  display: grid;
+  grid-template-columns: 40% 60%; /* 4:6 の比率 */
+  grid-template-rows: auto auto; /* 行は自動調整 */
+  gap: 16px;
+  padding: 32px;
+  background-image: url('/backimage.JPG');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/* コンテンツボックス */
+.content-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+/* 左のコンテンツ（40%） */
+.content-small {
+  grid-column: 1; /* 左側 */
+}
+
+/* 右のコンテンツ（60%） */
+.content-large {
+  grid-column: 2; /* 右側 */
+}
+
+/* コンテンツ3は全幅で配置 */
+.content-full {
+  grid-column: 1 / -1; /* すべての列を使う */
+}
+
+
+.hero-section {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: transparent; /* 透明にする */
+  position: relative;
+}
+
+
+/* ヘッダー（白背景にロゴのみ） */
+.hero-header {
+  width: 100%;
+  background: white; /* 白背景に変更 */
+  padding: 16px;
+  text-align: center;
+  position: relative; /* そのまま */
+  z-index: 20;
+  display: flex;
+  justify-content: center; /* ロゴを中央配置 */
+  align-items: center;
+  height: 80px; /* 高さ固定（必要なら） */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 軽く影をつけて見やすく */
+}
+
+
+/* フォトギャラリー */
+.photo-gallery {
+  width: 100%;
+  height: 60vh; /* 50vh → 60vh に変更 */
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+/* スライドのラッパー */
+.gallery-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* 高さを統一 */
+}
+
+/* 画像 */
+.gallery-img {
+  width: 100%;
+  height: 60vh; /* 50vh → 60vh に変更 */
+  object-fit: cover;
+}
+
+
+/* 最初に目に入るコンテンツ */
+.intro-content {
+  width: 100%;
+  height: 30vh; /* 画面の30%の高さを占める */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+}
+
+/* メインコンテンツ */
+.main-content {
+  padding: 40px;
+}
+
+/* 矢印のカスタマイズ */
+.slick-prev, .slick-next {
+  font-size: 24px;
+  color: white;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 20px;
+}
+
+/* インジケーターのデザイン */
+.slick-dots li button:before {
+  color: white;
+}
+
+
