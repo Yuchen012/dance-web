@@ -50,23 +50,25 @@ export default function Home() {
       <section className="intro-content">
         <h2>スタジオの説明</h2>
         <p>ああああああああああああああああああああああああああああああああああああああああああ</p>
+        <p>ああああああああああああああああああああああああああああああああああああああああああ</p>
       </section>
 
-      {/* その他のコンテンツ */}
+
+
       <main className="main-content">
-        <section className="content-box content-small">
-          <h2 className="content-title">Sample Content 1</h2>
-          <p className="content-text">This is the description area below the title.</p>
-        </section>
+       <section className="content-box content-one">
+        <h2 className="content-title">Sample Content 1</h2>
+        <p className="content-text">This is the description area below the title.</p>
+        <p className="content-text">Sample Content 2</p>
+        <p className="content-text">Sample Content 2</p>
+       </section>
 
-        <section className="content-box content-large">
-          <p className="content-text">Sample Content 2</p>
-        </section>
-
-        <section className="content-box content-full">
-          <p className="content-text">Sample Content 3</p>
-        </section>
+       <section className="content-box content-two">
+        <p className="content-text">Sample Content 3</p>
+       </section>
       </main>
+
+
 
       {/* フッター */}
       <footer className="bg-gray-800 text-white p-4 text-center">
