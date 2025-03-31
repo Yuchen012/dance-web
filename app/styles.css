@@ -12,13 +12,42 @@
   backdrop-filter: blur(10px);
 }
 
-/* コンテンツ1（統合されたコンテンツ） */
 .content-one {
-  width: 90vw; /* ほぼ横幅いっぱい */
-  max-width: 1200px; /* 最大幅を設定 */
-  background-color: #d3d3d3; /* グレー背景 */
-  border-radius: 12px; /* 角を丸く */
-  margin: 10px auto; /* 上下余白をつけて中央配置 */
+  padding: 20px;
+}
+
+.class-fee-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.class-info {
+  width: 40%;
+}
+
+.class-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.fee-table {
+  width: 60%;
+}
+
+.table-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.table-cell {
+  background-color: #ddd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
 }
 
 /* コンテンツ2（全幅） */
@@ -100,10 +129,7 @@
 
 
 
-/* メインコンテンツ */
-.main-content {
-  padding: 40px;
-}
+
 
 /* 矢印のカスタマイズ */
 .slick-prev, .slick-next {

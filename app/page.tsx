@@ -56,17 +56,41 @@ export default function Home() {
 
 
       <main className="main-content">
-       <section className="content-box content-one">
-        <h2 className="content-title">Sample Content 1</h2>
-        <p className="content-text">This is the description area below the title.</p>
-        <p className="content-text">Sample Content 2</p>
-        <p className="content-text">Sample Content 2</p>
-       </section>
-
-       <section className="content-box content-two">
-        <p className="content-text">Sample Content 3</p>
-       </section>
-      </main>
+  <section className="content-box content-one">
+    <div className="class-fee-container">
+      <div className="class-info">
+        <h2 className="content-title">クラス</h2>
+        <ul className="class-list">
+          <li>クラス1</li>
+          <li>クラス2</li>
+          <li>クラス3</li>
+          <li>クラス4</li>
+        </ul>
+      </div>
+      <div className="fee-table">
+        <h2 className="content-title">料金表</h2>
+        <div className="table-grid">
+          <div className="table-cell">パターン1</div>
+          <div className="table-cell">パターン2</div>
+          <div className="table-cell">パターン3</div>
+          <div className="table-cell">パターン4</div>
+          <div className="table-cell">料金A</div>
+          <div className="table-cell">料金B</div>
+          <div className="table-cell">料金C</div>
+          <div className="table-cell">料金D</div>
+          <div className="table-cell">説明A</div>
+          <div className="table-cell">説明B</div>
+          <div className="table-cell">説明C</div>
+          <div className="table-cell">説明D</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section className="content-box content-two">
+    <p className="content-text">Sample Content 3</p>
+  </section>
+</main>
 
 
 
