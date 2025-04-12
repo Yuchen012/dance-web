@@ -1,54 +1,97 @@
-
-
-
-/* 共通スタイル */
-.content-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-  backdrop-filter: blur(10px);
+/* main-content に上の余白を追加（③） */
+.main-content {
+  margin-top: 40px;
 }
 
-.content-one {
-  padding: 20px;
-}
-
+/* クラス＆料金共通レイアウト（①②） */
 .class-fee-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* スマホ以下は縦並びに（②） */
+@media (max-width: 768px) {
+  .class-fee-container {
+    flex-direction: column;
+  }
+
+  .class-info,
+  .fee-table {
+    width: 100%;
+  }
+}
+
+/* クラスセクション */
 .class-info {
-  width: 40%;
+  width: 45%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+}
+
+/* クラスリストの見た目 */
+.class-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .class-list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
+.class-list li {
+  padding: 10px 16px;
+  margin-bottom: 8px;
+  background-color: #f0f0f0;
+  border-left: 4px solid #a3b18a;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* 料金表セクション */
 .fee-table {
-  width: 60%;
+  width: 50%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
+.fee-table h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* グリッドの調整（①） */
 .table-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, auto);
-  gap: 10px;
-  background-color: #f5f5f5;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* 自動で収まるように */
+  gap: 12px;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .table-cell {
-  background-color: #ddd;
-  padding: 10px;
+  background-color: #d3d3d3;
+  padding: 12px 16px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 
 /* コンテンツ2（全幅） */
 .content-two {
@@ -58,7 +101,6 @@
   border-radius: 12px; /* 角を丸く */
   margin: 10px auto; /* 上下余白をつけて中央配置 */
 }
-
 
 
 .hero-section {
