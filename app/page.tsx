@@ -68,28 +68,51 @@ export default function Home() {
         </ul>
       </div>
       <div className="fee-table">
-        <h2 className="content-title">料金表</h2>
-        <div className="table-grid">
-          <div className="table-cell">パターン1</div>
-          <div className="table-cell">パターン2</div>
-          <div className="table-cell">パターン3</div>
-          <div className="table-cell">パターン4</div>
-          <div className="table-cell">料金A</div>
-          <div className="table-cell">料金B</div>
-          <div className="table-cell">料金C</div>
-          <div className="table-cell">料金D</div>
-          <div className="table-cell">説明A</div>
-          <div className="table-cell">説明B</div>
-          <div className="table-cell">説明C</div>
-          <div className="table-cell">説明D</div>
-        </div>
-      </div>
+  <h2 className="content-title">料金表</h2>
+  <div className="price-card-grid">
+    <div className="price-card">
+      <div className="card-section pattern">パターン1</div>
+      <div className="card-section price">料金A</div>
+      <div className="card-section description">説明A</div>
+    </div>
+    <div className="price-card">
+      <div className="card-section pattern">パターン2</div>
+      <div className="card-section price">料金B</div>
+      <div className="card-section description">説明B</div>
+    </div>
+    <div className="price-card">
+      <div className="card-section pattern">パターン3</div>
+      <div className="card-section price">料金C</div>
+      <div className="card-section description">説明C</div>
+    </div>
+    <div className="price-card">
+      <div className="card-section pattern">パターン4</div>
+      <div className="card-section price">料金D</div>
+      <div className="card-section description">説明D</div>
+    </div>
+  </div>
+</div>
+
+
     </div>
   </section>
   
   <section className="content-box content-two">
-    <p className="content-text">Sample Content 3</p>
-  </section>
+  <h2 className="content-title">アクセス</h2>
+  <div className="map-container">
+  <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7401218362027!2d139.69950331525848!3d35.524482780234885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185f01f04cf2e3%3A0xc1163c3a0a1d2fa4!2z44CSMjEwLTAwMjIg56We5aWI5bed55yM5bed5bSO5Y2X5Z2C!5e0!3m2!1sja!2sjp!4v1682032234478!5m2!1sja!2sjp"
+  width="100%"
+  height="400"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+
+  </div>
+</section>
+
 </main>
 
 
