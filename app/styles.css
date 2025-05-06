@@ -1,165 +1,80 @@
-/* main-content に上の余白を追加（③） */
 .main-content {
   margin-top: 40px;
 }
 
-/* クラス＆料金共通レイアウト（①②） */
-.class-fee-container {
+/* パターン4ベースのシンプルモダンなデザイン */
+.unified-card {
+  border-top: 4px solid #a5d6a7;
+  border-bottom: 4px solid #a5d6a7;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.unified-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.class-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1b5e20;
+  margin-bottom: 12px;
+}
+
+.class-description {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.class-price {
+  font-size: 1rem;
+  color: #33691e;
+  font-weight: 600;
+}
+
+
+/* ✅ 全体セクションの上に区切り線 */
+.class-fee-container.three-cards-row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 60px auto 0; /* 上に余白追加 */
+  padding-top: 40px;
+  border-top: 1px solid #e0e0e0;
+  
 }
 
-/* スマホ以下は縦並びに（②） */
-@media (max-width: 768px) {
-  .class-fee-container {
-    flex-direction: column;
-  }
-
-  .class-info,
-  .fee-table {
-    width: 100%;
-  }
-}
-
-/* クラスセクション */
-.class-info {
-  width: 45%;
+/* ✅ カード全体を緑で囲む（上下だけでなく四辺すべて） */
+.price-card.unified-card {
+  flex: 1 1 calc(33.33% - 20px);
+  min-width: 280px;
+  border: 2px solid #a5d6a7; /* 上下→四辺に変更 */
   background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: left;
-}
-
-/* クラスリストの見た目 */
-.class-info h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.class-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.class-list li {
-  padding: 10px 16px;
-  margin-bottom: 8px;
-  background-color: #f0f0f0;
-  border-left: 4px solid #a3b18a;
-  border-radius: 6px;
-  font-weight: 500;
-}
-
-/* 料金表セクション */
-.fee-table {
-  width: 50%;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-.fee-table h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.price-card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-  padding: 10px;
-}
-
-.price-card {
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease;
-}
-
-.price-card:hover {
-  transform: translateY(-5px);
-}
-
-.card-section {
-  padding: 16px;
-  font-weight: 500;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.card-section:last-child {
-  border-bottom: none;
-}
-
-.card-section.pattern::before {
-  content: "🧩";
-}
-
-.card-section.price::before {
-  content: "💵";
-}
-
-.card-section.description::before {
-  content: "ℹ️";
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 
-/* 色分け */
-.pattern {
-  background-color: #f0f8ff;
-  color: #0d47a1;
-  font-weight: 600;
-}
 
-.price {
-  background-color: #e8f5e9;
-  color: #bad4b5;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
 
-.description {
-  background-color: #e6e1d4;
-  color: #6d4c41;
-  font-size: 0.95rem;
-}
 
-.card-section i {
-  margin-right: 8px;
-  vertical-align: middle;
-  font-size: 1.1rem;
-  opacity: 0.8;
-}
-.icon-text {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px; /* アイコンとテキストの間 */
-  font-size: 1rem;
-}
 
-.card-section {
-  padding: 16px;
-  font-weight: 500;
-  border-bottom: 1px solid #eee;
-}
 
-.card-section:last-child {
-  border-bottom: none;
-}
+
+
 
 
 /* コンテンツ2（全幅） */

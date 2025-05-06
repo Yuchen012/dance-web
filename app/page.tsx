@@ -49,53 +49,47 @@ export default function Home() {
       {/* 最初に見えるコンテンツ */}
       <section className="intro-content">
         <h2>スタジオの説明</h2>
-        <p>ああああああああああああああああああああああああああああああああああああああああああ</p>
-        <p>ああああああああああああああああああああああああああああああああああああああああああ</p>
+        <p>あああああああああああああああああああああああああああああああああああああああああああああ</p>
+        <p>あああああああああああああああああああああああああああああああああああああああああああああ</p>
       </section>
 
 
 
       <main className="main-content">
-  <section className="content-box content-one">
-    <div className="class-fee-container">
-      <div className="class-info">
-        <h2 className="content-title">クラス</h2>
-        <ul className="class-list">
-          <li>クラス1</li>
-          <li>クラス2</li>
-          <li>クラス3</li>
-          <li>クラス4</li>
-        </ul>
-      </div>
-      <div className="fee-table">
-  <h2 className="content-title">料金表</h2>
-  <div className="price-card-grid">
-    <div className="price-card">
-      <div className="card-section pattern">パターン1</div>
-      <div className="card-section price">料金A</div>
-      <div className="card-section description">説明A</div>
+      <section className="content-box content-one">
+  <div className="class-fee-container three-cards-row">
+    <div className="price-card unified-card">
+      <h3 className="class-title">小学校クラス</h3>
+      <p className="class-description">
+        運動習慣は子どもにとって大切です。<br />
+        楽しく動きながら、運動能力向上や良い姿勢を目指します。
+      </p>
+      <div className="class-price">月4回／6,500円（60分）</div>
     </div>
-    <div className="price-card">
-      <div className="card-section pattern">パターン2</div>
-      <div className="card-section price">料金B</div>
-      <div className="card-section description">説明B</div>
+
+    <div className="price-card unified-card">
+      <h3 className="class-title">親子クラス（幼児・小学生）</h3>
+      <p className="class-description">
+        50分ですが、ストレッチ・ダンスバレエの基礎・踊りを内容豊富に。<br />
+        お母さんにとっても良い運動になります。
+      </p>
+      <div className="class-price">月4回／5,000円（50分・1人）</div>
     </div>
-    <div className="price-card">
-      <div className="card-section pattern">パターン3</div>
-      <div className="card-section price">料金C</div>
-      <div className="card-section description">説明C</div>
-    </div>
-    <div className="price-card">
-      <div className="card-section pattern">パターン4</div>
-      <div className="card-section price">料金D</div>
-      <div className="card-section description">説明D</div>
+
+    <div className="price-card unified-card">
+      <h3 className="class-title">おとなクラス</h3>
+      <p className="class-description">
+        学生からシニアまでピラティス・ダンス・バレエで<br />
+        美しい姿勢や体力づくりを目指します。
+      </p>
+      <div className="class-price">月4回／6,500円～（90分）</div>
     </div>
   </div>
-</div>
+</section>
 
 
-    </div>
-  </section>
+
+
   
   <section className="content-box content-two">
   <h2 className="content-title">アクセス</h2>
