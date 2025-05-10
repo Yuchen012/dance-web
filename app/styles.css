@@ -68,6 +68,43 @@
 }
 
 
+.class-fee-wrapper {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.class-fee-container.three-cards-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.class-notes {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.class-notes ul {
+  display: inline-block;      /* 横幅に応じたサイズに */
+  text-align: left;           /* 各項目は左寄せのまま */
+  margin: 0 auto;             /* 横中央寄せ */
+  padding: 0;
+  list-style: none;
+}
+
+.class-notes ul li::before {
+  content: "★ ";
+  color: #ff8a65;             /* オレンジ系の目立つ色 */
+}
+
+
+
+
+
 
 
 
@@ -147,7 +184,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #e3e7b8;
+  background: #f1e1d1;
   padding: 20px;
 }
 
