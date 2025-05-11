@@ -106,20 +106,32 @@ export default function Home() {
 
   
   <section className="content-box content-two">
-  <h2 className="content-title">アクセス</h2>
-  <div className="map-container">
-  <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7401218362027!2d139.69950331525848!3d35.524482780234885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185f01f04cf2e3%3A0xc1163c3a0a1d2fa4!2z44CSMjEwLTAwMjIg56We5aWI5bed55yM5bed5bSO5Y2X5Z2C!5e0!3m2!1sja!2sjp!4v1682032234478!5m2!1sja!2sjp"
-  width="100%"
-  height="400"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-/>
+  <h2 className="content-title">アクセス・お問い合わせ</h2>
 
+  {/* 上：お問い合わせ情報 */}
+  <div className="contact-info">
+    <p><strong>教室名：</strong>Studio Anne</p>
+    <p><strong>住所：</strong>〒400-0836 山梨県甲府市下石田2丁目10-5</p>
+    <p><strong>電話番号：</strong>055-242-8252</p>
+    <p><strong>受付時間：</strong>10:00〜18:00</p>
+    <p className="contact-note">※レッスン中などで出られない場合がございます。ご了承ください。</p>
+    <p className="contact-note">その場合はいただいたお電話番号に折り返しご連絡させていただきます。</p>
+  </div>
+
+  {/* 下：Google Map埋め込み */}
+  <div className="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7401218362027!2d139.69950331525848!3d35.524482780234885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185f01f04cf2e3%3A0xc1163c3a0a1d2fa4!2z44CS400-0836!5e0!3m2!1sja!2sjp!4v1682032234478!5m2!1sja!2sjp"
+      width="100%"
+      height="400"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
   </div>
 </section>
+
 
 </main>
 
@@ -127,7 +139,7 @@ export default function Home() {
 
       {/* フッター */}
       <footer className="bg-gray-800 text-white p-4 text-center">
-        <p>&copy; 2025 Sample Website</p>
+        <p>&copy; 2025 Studio Anne</p>
       </footer>
     </div>
   );
