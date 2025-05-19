@@ -1,54 +1,55 @@
 "use client";
 
 import Image from "next/image";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import "./styles.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "./styles.css"; // 既存のCSSを活かす
 
 export default function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,  // 1枚ずつ表示
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
-  };
-
   return (
     <div className="flex flex-col min-h-screen">
-      {/* ヘッダー + フォトギャラリーを含めた最初のセクション */}
+      {/* ヒーローセクション */}
       <section className="hero-section">
-        {/* ヘッダー */}
         <header className="hero-header">
           <Image src="/logo.png" alt="Site Logo" width={150} height={50} />
         </header>
 
-        {/* フォトギャラリー */}
+        {/* Swiper ギャラリー */}
         <div className="photo-gallery">
-          <Slider {...settings}>
-            <div className="gallery-slide">
-              <Image src="/gallery1.jpg" alt="Gallery Image 1" layout="intrinsic" width={1920} height={800} className="gallery-img"/>
-            </div>
-            <div className="gallery-slide">
-              <Image src="/gallery2.jpg" alt="Gallery Image 2" layout="intrinsic" width={1920} height={800} className="gallery-img"/>
-            </div>
-            <div className="gallery-slide">
-              <Image src="/gallery3.jpg" alt="Gallery Image 3" layout="intrinsic" width={1920} height={800} className="gallery-img"/>
-            </div>
-            <div className="gallery-slide">
-              <Image src="/gallery4.jpg" alt="Gallery Image 4" layout="intrinsic" width={1920} height={800} className="gallery-img"/>
-            </div>
-          </Slider>
+          <Swiper
+            modules={[Autoplay, Navigation, Pagination]}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000 }}
+            loop={true}
+            className="gallery-swiper"
+          >
+            {["gallery1.jpg", "gallery2.jpg", "gallery3.jpg", "gallery4.jpg"].map((img, index) => (
+              <SwiperSlide key={index}>
+                <div className="gallery-slide">
+                  <Image
+                    src={`/${img}`}
+                    alt={`Gallery Image ${index + 1}`}
+                    layout="intrinsic"
+                    width={1920}
+                    height={800}
+                    className="gallery-img"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
 
       {/* 最初に見えるコンテンツ */}
       <section className="intro-content">
-        <h2>ジャズダンス・モダンバレエ入門！</h2>
+        <h2>ジャズダンス・ピラティス・モダンバレエ入門！</h2>
         <p>音楽にのって楽しく身体を動かしながら</p>
         <p>体力・筋力・柔軟性・バランス感覚の向上を目指します。</p>
         <p>ピラティスでは美しい姿勢、しっかりした体幹を！</p>
@@ -61,7 +62,7 @@ export default function Home() {
   <div className="class-fee-wrapper">
     <div className="class-fee-container three-cards-row">
       <div className="price-card unified-card">
-        <h3 className="class-title">小学校クラス</h3>
+        <h3 className="class-title">子どもクラス（４才〜１２才）</h3>
         <p className="class-description">
           運動習慣は子どもにとって大切です。<br />
           楽しく動きながら、運動能力向上や良い姿勢を目指します。
@@ -92,8 +93,7 @@ export default function Home() {
     <div className="class-notes">
       <ul>
         <li>レッスン料の他に、ひとりにつき入会金 5,000円が必要となります。（※全て税込表示となります）</li>
-        <li>小学生・親子クラスは、ストレッチ・ダンス・バレエ中心となります（ピラティスもあります）</li>
-        <li>幼児のみのクラスもございますので、お気軽にお問い合わせください。</li>
+        <li>子どもクラス・親子クラスは、ストレッチ・ダンス・バレエ中心となります（ピラティスもあります）</li>
         <li>火・水・金・日曜日にレッスンがあります。レッスン時間などはお問い合わせください。</li>
       </ul>
     </div>

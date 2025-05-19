@@ -1,77 +1,66 @@
 /* ヘッダー（白背景にロゴのみ） */
 .hero-header {
   width: 100%;
-  background: white; /* 白背景に変更 */
+  background: white;
   padding: 16px;
   text-align: center;
-  position: relative; /* そのまま */
+  position: relative;
   z-index: 20;
   display: flex;
-  justify-content: center; /* ロゴを中央配置 */
+  justify-content: center;
   align-items: center;
-  height: 80px; /* 高さ固定（必要なら） */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 軽く影をつけて見やすく */
+  height: 80px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 /* フォトギャラリー */
 .photo-gallery {
   width: 100%;
-  height: 70vh; /* 50vh → 60vh に変更 */
+  height: 70vh;
   overflow: hidden;
-  padding-top: 10px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  position: relative;
+  z-index: 2;
 }
 
-/* スライドのラッパー */
+/* スライド内の画像ラッパー */
 .gallery-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* 高さを統一 */
+  height: 100%;
 }
 
-/* 画像 */
+/* ギャラリー画像 */
 .gallery-img {
   width: 100%;
-  height: 70vh; /* 50vh → 60vh に変更 */
+  height: 100%;
   object-fit: cover;
 }
 
-/* 矢印のカスタマイズ */
-.slick-prev, .slick-next {
-  font-size: 24px;
+/* Swiperの矢印ボタン */
+.swiper-button-prev,
+.swiper-button-next {
   color: white;
-  z-index: 10;
-  top: 50%;
-  transform: translateY(-50%);
+  font-size: 28px;
 }
 
-.slick-prev {
-  left: 20px;
+/* Swiperのインジケーター（ドット） */
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.6;
+}
+.swiper-pagination-bullet-active {
+  background: white;
+  opacity: 1;
 }
 
-.slick-next {
-  right: 20px;
-}
-
-/* インジケーターのデザイン */
-.slick-dots li button:before {
-  color: white;
-}
-
-
-.map-container {
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-
+/* introセクション */
 .intro-content {
   width: 100%;
-  height: 30vh; /* 画面の30%の高さを占める */
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,20 +68,19 @@
   text-align: center;
   background: #b1eec5;
   padding: 20px;
+  margin-top: 0;
+  position: relative;  /* ←追加 */
+  z-index: 1; 
 }
 
 .intro-content h2 {
-  font-size: 2rem; /* お好みで調整（例：32px相当） */
-  margin-bottom: 12px; /* 下に少し余白を入れると自然 */
+  font-size: 2rem;
+  margin-bottom: 12px;
 }
 
-
-
-
-
-.main-content {
+/* .main-content {
   margin-top: 40px;
-}
+} */
 
 /* パターン4ベースのシンプルモダンなデザイン */
 .unified-card {
@@ -131,8 +119,7 @@
   font-weight: 600;
 }
 
-
-/* ✅ 全体セクションの上に区切り線 */
+/* 全体セクションの上に区切り線 */
 .class-fee-container.three-cards-row {
   display: flex;
   justify-content: space-between;
@@ -140,17 +127,16 @@
   gap: 20px;
   width: 100%;
   max-width: 1200px;
-  margin: 60px auto 0; /* 上に余白追加 */
+  margin: 60px auto 0;
   padding-top: 40px;
   border-top: 1px solid #e0e0e0;
-  
 }
 
-/* ✅ カード全体を緑で囲む（上下だけでなく四辺すべて） */
+/* カード全体を緑で囲む */
 .price-card.unified-card {
   flex: 1 1 calc(33.33% - 20px);
   min-width: 280px;
-  border: 2px solid #a5d6a7; /* 上下→四辺に変更 */
+  border: 2px solid #a5d6a7;
   background-color: #ffffff;
   border-radius: 12px;
   padding: 24px;
@@ -159,20 +145,11 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
 .class-fee-wrapper {
   max-width: 1200px;
   margin: 60px auto 0;
   padding-bottom: 80px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.class-fee-container.three-cards-row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
 }
 
 .class-notes {
@@ -181,30 +158,32 @@
 }
 
 .class-notes ul {
-  display: inline-block;      /* 横幅に応じたサイズに */
-  text-align: left;           /* 各項目は左寄せのまま */
-  margin: 0 auto;             /* 横中央寄せ */
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
 
 .class-notes ul li::before {
   content: "★ ";
-  color: #ff8a65;             /* オレンジ系の目立つ色 */
+  color: #ff8a65;
 }
 
+/* スマホサイズ向けの調整 */
+@media (max-width: 768px) {
+  .photo-gallery {
+    height: 50vh;
+  }
 
+  .intro-content {
+    padding: 16px;
+  }
 
-
-
-
-
-
-
-
-
-
-
+  .gallery-img {
+    object-position: center top;
+  }
+}
 
 /* コンテンツ2（全幅） */
 .content-two {
@@ -248,21 +227,20 @@
 }
 
 .content-title {
-  font-size: 2rem;            /* タイトルとして大きめに */
-  font-weight: bold;          /* 太字 */
-  text-align: center;         /* 中央寄せ */
-  margin-bottom: 24px;        /* 下に余白 */
-  color: #2e7d32;             /* 濃い緑系でアクセント（変更可） */
-  border-bottom: 3px solid #a5d6a7; /* 下線追加で見出しっぽく */
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #2e7d32;
+  border-bottom: 3px solid #a5d6a7;
   display: inline-block;
   padding-bottom: 8px;
 }
 
-
-
-
-
-
-
-
-
+.map-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
