@@ -21,14 +21,15 @@ export default function Home() {
         {/* Swiper ギャラリー */}
         <div className="photo-gallery">
           <Swiper
-            modules={[Autoplay, Navigation, Pagination]}
-            slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 3000 }}
-            loop={true}
-            className="gallery-swiper"
-          >
+             modules={[Autoplay, Navigation, Pagination]}
+             slidesPerView={1}
+             navigation
+             pagination={{ clickable: true }}
+             autoplay={{ delay: 3000 }}
+             loop={true}
+             className="gallery-swiper"
+           >
+
             {["gallery1.jpg", "gallery2.jpg", "gallery3.jpg", "gallery4.jpg"].map((img, index) => (
               <SwiperSlide key={index}>
                 <div className="gallery-slide">
