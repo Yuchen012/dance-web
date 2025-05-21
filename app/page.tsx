@@ -112,7 +112,7 @@ export default function Home() {
   {/* 上：お問い合わせ情報 */}
   <div className="contact-info">
     <p><strong>教室名：</strong>Studio Anne</p>
-    <p><strong>住所：</strong>〒400-0836 山梨県甲府市下石田2丁目10-5</p>
+    <p><strong>住所：</strong>〒400-0836 山梨県甲府市小瀬町1352-3</p>
     <p><strong>電話番号：</strong>055-242-8252</p>
     <p><strong>受付時間：</strong>10:00〜18:00</p>
     <p className="contact-note">※レッスン中などで出られない場合がございます。ご了承ください。</p>
@@ -122,7 +122,7 @@ export default function Home() {
   {/* 下：Google Map埋め込み */}
   <div className="map-container">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7401218362027!2d139.69950331525848!3d35.524482780234885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185f01f04cf2e3%3A0xc1163c3a0a1d2fa4!2z44CS400-0836!5e0!3m2!1sja!2sjp!4v1682032234478!5m2!1sja!2sjp"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.464843123877!2d138.59039691525693!3d35.623355780206565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601be8455b942cfb%3A0xf4d7c8c0e937b5cf!2z44CSNDAwLTA4MzYg5bGx5Y-65bqc5bGx5Y-65biC5rKi55Sw5bKp77yR5LiB55uu77yR4oiS77yR77yR!5e0!3m2!1sja!2sjp!4v1747840709872!5m2!1sja!2sjp"
       width="100%"
       height="400"
       style={{ border: 0 }}
