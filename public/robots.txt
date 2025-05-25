@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: www.studio-anne.net
+
+# Sitemaps
+Sitemap: www.studio-anne.net/sitemap.xml
