@@ -15,8 +15,11 @@ export default function Home() {
       {/* ヒーローセクション */}
       <section className="hero-section">
         <header className="hero-header">
-          <Image src="/logo.png" alt="Site Logo" width={150} height={50} />
-        </header>
+  <div className="logo-wrapper">
+    <Image src="/logo.png" alt="Site Logo" width={150} height={50} />
+  </div>
+</header>
+
 
         {/* Swiper ギャラリー */}
         <div className="photo-gallery">
