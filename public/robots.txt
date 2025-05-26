@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: www.studio-anne.net
+Host: https://studio-anne.net
 
 # Sitemaps
-Sitemap: www.studio-anne.net/sitemap.xml
+Sitemap: https://studio-anne.net/sitemap.xml
