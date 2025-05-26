@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Studio Anne",
-  description: "Studio Anneのサイト",
+  title: "Studio Anne | ジャズダンス・ピラティス・モダンバレエ入門！",
+  description: "山梨県甲府市にあるスタジオです。音楽にのって楽しく身体を動かしながら体力・筋力・柔軟性・バランス感覚の向上を目指します。ピラティスでは美しい姿勢、しっかりした体幹を！",
 };
 
 export default function RootLayout({
