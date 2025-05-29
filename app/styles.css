@@ -1,23 +1,76 @@
-/* ヘッダー（白背景にロゴのみ） */
 .hero-header {
   width: 100%;
   background: white;
-  padding: 16px;
-  text-align: center;
+  padding: 0 24px;
   position: relative;
   z-index: 20;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* ← これが左右に配置 */
   align-items: center;
   height: 80px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* ロゴの周囲デザイン（そのままでOK） */
 .logo-wrapper {
-  border: 2px solid #a5d6a7;
-  padding: 10px; /* 線と画像の間に少し余白を入れる場合 */
-  border-radius: 10px; /* 任意：角を丸くしたい場合 */
+  /* border: 2px solid #a5d6a7; */
+  padding: 10px;
+  border-radius: 10px;
 }
+
+/* ハンバーガーメニューのボタン */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px;
+}
+
+/* ハンバーガーの線 */
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  display: block;
+}
+
+
+/* ハンバーガーメニュー */
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 24px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hero-header {
+    padding: 0 16px;
+    height: 64px;
+  }
+
+  .logo-wrapper {
+    padding: 6px;
+  }
+
+  .hamburger span {
+    width: 20px;
+  }
+}
+
+
 
 /* フォトギャラリー */
 .photo-gallery {
@@ -77,8 +130,13 @@
   z-index: 1; 
 }
 
-.intro-content h2 {
+.intro-content h1 {
   font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.intro-content h2 {
+  font-size: 1.5rem;
   margin-bottom: 12px;
 }
 
