@@ -63,7 +63,7 @@
 
   .logo-wrapper {
     padding: 4px; /* ← 小さく */
-    transform: scale(0.8); /* ← 縮小（場合によって0.8くらいでもOK） */
+    transform: scale(0.9); /* ← 縮小（場合によって0.8くらいでもOK） */
     margin-right: auto; /* ← これで左寄せ */
   }
 
