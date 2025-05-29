@@ -62,7 +62,8 @@
   }
 
   .logo-wrapper {
-    padding: 6px;
+    padding: 4px; /* ← 小さく */
+    transform: scale(0.9); /* ← 縮小（場合によって0.8くらいでもOK） */
   }
 
   .hamburger span {
