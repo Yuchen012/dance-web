@@ -82,11 +82,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: white;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  display: none !important;
 }
 
 .swiper-pagination-bullet {
@@ -185,10 +181,9 @@
 }
 
 .unified-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  transform: none;
+  box-shadow: noen;
 }
-
 .class-title {
   font-size: 1.1rem;
   color: #2e7d32;
