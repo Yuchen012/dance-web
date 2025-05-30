@@ -1,3 +1,4 @@
+/* ヘッダー */
 .hero-header {
   width: 100%;
   background: white;
@@ -5,20 +6,17 @@
   position: relative;
   z-index: 20;
   display: flex;
-  justify-content: space-between; /* ← これが左右に配置 */
+  justify-content: space-between;
   align-items: center;
   height: 80px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ロゴの周囲デザイン（そのままでOK） */
 .logo-wrapper {
-  /* border: 2px solid #a5d6a7; */
   padding: 10px;
   border-radius: 10px;
 }
 
-/* ハンバーガーメニューのボタン */
 .hamburger {
   background: none;
   border: none;
@@ -30,7 +28,6 @@
   padding: 8px;
 }
 
-/* ハンバーガーの線 */
 .hamburger span {
   width: 24px;
   height: 2px;
@@ -38,8 +35,6 @@
   display: block;
 }
 
-
-/* ハンバーガーメニュー */
 .hamburger-menu {
   display: flex;
   flex-direction: column;
@@ -55,68 +50,53 @@
   transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .hero-header {
-    padding: 0 8px 0 4px;
-    height: 64px;
-  }
-
-  .logo-wrapper {
-    padding: 4px; /* ← 小さく */
-    transform: scale(0.9); /* ← 縮小（場合によって0.8くらいでもOK） */
-    margin-right: auto; /* ← これで左寄せ */
-  }
-
-  .hamburger span {
-    width: 20px;
-  }
-}
-
-
-
 /* フォトギャラリー */
 .photo-gallery {
   width: 100%;
-  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-/* スライド内の画像ラッパー */
 .gallery-slide {
-  width: 100%;
-  height: 100%;
   position: relative;
+  width: 100%;
+  aspect-ratio: 1477 / 1108;
+  overflow: hidden;
 }
 
-/* ギャラリー画像 */
 .gallery-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-
-
+.gallery-swiper {
+  width: 100%;
+  height: auto;
+}
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: white; /* 必要に応じて変更 */
+  color: white;
   top: 50%;
   transform: translateY(-50%);
   width: 44px;
   height: 44px;
 }
 
-/* Swiperのインジケーター（ドット） */
 .swiper-pagination-bullet {
   background: white;
   opacity: 0.6;
 }
+
 .swiper-pagination-bullet-active {
   background: white;
   opacity: 1;
 }
 
-/* introセクション */
+/* Intro セクション */
 .intro-content {
   width: 100%;
   min-height: 30vh;
@@ -125,11 +105,13 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #a5d6a7;
-  padding: 20px;
+  background: #f5f5f5;
+  padding: 0 20px 20px;
   margin-top: 0;
-  position: relative;  /* ←追加 */
-  z-index: 1; 
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  opacity: 1;
 }
 
 .intro-content h1 {
@@ -142,20 +124,47 @@
   margin-bottom: 12px;
 }
 
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .hero-header {
+    padding: 0 8px 0 4px;
+    height: 64px;
+  }
+
+  .logo-wrapper {
+    padding: 4px;
+    transform: scale(0.9);
+    margin-right: auto;
+  }
+
+  .hamburger span {
+    width: 20px;
+  }
+
+  .photo-gallery {
+    height: auto;
+  }
+
+  .intro-content {
+    margin-top: -90px !important;
+  }
+}
+
+
 /* .main-content {
   margin-top: 40px;
 } */
 
-/* パターン4ベースのシンプルモダンなデザイン */
+.content-one {
+  /* background-color: #f5f5f5; */
+  padding: 60px 20px;
+}
+
 .unified-card {
-  border-top: 4px solid #a5d6a7;
-  border-bottom: 4px solid #a5d6a7;
   background-color: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: none;
 }
 
 .unified-card:hover {
@@ -164,23 +173,23 @@
 }
 
 .class-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #1b5e20;
+  font-size: 1.1rem;
+  color: #2e7d32;
+  font-weight: 600;
   margin-bottom: 12px;
 }
 
 .class-description {
   font-size: 0.95rem;
-  color: #555;
+  color: #444;
   line-height: 1.6;
   margin-bottom: 16px;
 }
 
 .class-price {
   font-size: 1rem;
-  color: #33691e;
-  font-weight: 600;
+  color: #1b5e20;
+  font-weight: bold;
 }
 
 /* 全体セクションの上に区切り線 */
@@ -196,11 +205,19 @@
   border-top: 1px solid #e0e0e0;
 }
 
+.class-title {
+  font-size: 1.1rem;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+
+
 /* カード全体を緑で囲む */
 .price-card.unified-card {
   flex: 1 1 calc(33.33% - 20px);
   min-width: 280px;
-  border: 2px solid #a5d6a7;
+  border: 1px solid #d0e6d5;
   background-color: #ffffff;
   border-radius: 12px;
   padding: 24px;
@@ -222,16 +239,15 @@
 }
 
 .class-notes ul {
-  display: inline-block;
-  text-align: left;
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  padding-left: 1em;
 }
 
 .class-notes ul li::before {
-  content: "★ ";
-  color: #ff8a65;
+  content: "・";
+  color: #4caf50;
 }
 
 /* スマホサイズ向けの調整 */
@@ -242,10 +258,6 @@
 
   .intro-content {
     padding: 16px;
-  }
-
-  .gallery-img {
-    object-position: center top;
   }
 }
 

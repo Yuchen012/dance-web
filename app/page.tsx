@@ -26,36 +26,36 @@ export default function Home() {
   </button>
 </header>
 
-
-
-        {/* Swiper ギャラリー */}
-        <div className="photo-gallery">
-          <Swiper
-             modules={[Autoplay, Navigation, Pagination]}
-             slidesPerView={1}
-             navigation
-             pagination={{ clickable: true }}
-             autoplay={{ delay: 3000 }}
-             loop={true}
-             className="gallery-swiper"
-           >
-
-            {["gallery1.jpg", "gallery2.jpg", "gallery3.jpg", "gallery4.jpg"].map((img, index) => (
-              <SwiperSlide key={index}>
-                <div className="gallery-slide">
-                  <Image
-                    src={`/${img}`}
-                    alt={`Gallery Image ${index + 1}`}
-                    layout="intrinsic"
-                    width={1920}
-                    height={800}
-                    className="gallery-img"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+<div className="photo-gallery">
+  <Swiper
+    modules={[Autoplay, Navigation, Pagination]}
+    slidesPerView={1}
+    navigation
+    pagination={{ clickable: true }}
+    autoplay={{ delay: 3000 }}
+    loop={true}
+    className="gallery-swiper"
+  >
+    {["gallery1.jpg", "gallery2.jpg", "gallery3.jpg", "gallery4.jpg"].map((img, index) => (
+      <SwiperSlide key={index}>
+        <div className="gallery-slide">
+          <div className="aspect-wrapper">
+            <Image
+      src={`/${img}`}
+      alt={`Gallery Image ${index + 1}`}
+      fill
+      className="gallery-img"
+      style={{ objectFit: "cover" }}
+    />
+          </div>
         </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+
+
+        
       </section>
 
       {/* 最初に見えるコンテンツ */}
