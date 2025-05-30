@@ -153,15 +153,15 @@
   }
 
   .intro-content h1 {
-    font-size: 1.5rem; /* 以前の2rem → 1.5rem に調整 */
+    font-size: 1.0rem; /* 以前の2rem → 1.5rem に調整 */
   }
 
   .intro-content h2 {
-    font-size: 1.25rem; /* 以前の1.5rem → 1.25rem に調整 */
+    font-size: 1.0rem; /* 以前の1.5rem → 1.25rem に調整 */
   }
 
   .intro-content p {
-    font-size: 0.95rem; /* 通常より少しだけ小さく */
+    font-size: 0.85rem; /* 通常より少しだけ小さく */
     line-height: 1.6;
   }
 }
