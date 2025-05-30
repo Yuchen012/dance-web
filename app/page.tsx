@@ -60,7 +60,6 @@ export default function Home() {
 
       {/* 最初に見えるコンテンツ */}
       <section className="intro-content">
-        <h1>Studio Anne | 山梨県甲府市のスタジオ</h1>
         <h2>ジャズダンス・ピラティス・モダンバレエ入門！</h2>
         <p>音楽にのって楽しく身体を動かしながら</p>
         <p>体力・筋力・柔軟性・バランス感覚の向上を目指します。</p>
