@@ -1,25 +1,26 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Noto_Serif_JP, Archivo } from "next/font/google";
+import { Noto_Sans_JP, Shippori_Mincho, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
+  weight: ["400", "500", "700"],
   display: "swap",
 });
 
-const notoSerifJP = Noto_Serif_JP({
-  variable: "--font-noto-serif-jp",
+const shippori = Shippori_Mincho({
+  variable: "--font-mincho",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
-const archivo = Archivo({
-  variable: "--font-archivo",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["500", "700", "800", "900"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -44,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${notoSansJP.variable} ${notoSerifJP.variable} ${archivo.variable} antialiased`}
+        className={`${notoSansJP.variable} ${shippori.variable} ${cormorant.variable} antialiased`}
       >
         {children}
       </body>

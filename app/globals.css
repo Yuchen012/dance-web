@@ -1,17 +1,12 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 :root {
-  --background: #faf8f3;
-  --foreground: #141a16;
+  --background: #f7f3ec;
+  --foreground: #2a2622;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-noto-sans-jp), "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-noto-sans-jp), "Hiragino Sans", "Helvetica Neue", Arial, sans-serif;
 }
