@@ -32,8 +32,8 @@ html {
 /* next/font の変数は body に付くため、フォントトークンはここで定義 */
 .site {
   --font-latin: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
-  --font-serif-jp: var(--font-mincho), "Shippori Mincho", "Hiragino Mincho ProN", serif;
-  --font-jp: var(--font-noto-sans-jp), sans-serif;
+  --font-serif-jp: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+  --font-jp: "Noto Sans JP", "Hiragino Sans", sans-serif;
   background: var(--paper);
   color: var(--ink);
   overflow-x: clip;

@@ -1,20 +1,11 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Shippori_Mincho, Cormorant_Garamond } from "next/font/google";
+import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const notoSansJP = Noto_Sans_JP({
-  variable: "--font-noto-sans-jp",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-});
-
-const shippori = Shippori_Mincho({
-  variable: "--font-mincho",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  display: "swap",
-});
+// 日本語フォントはファイル数が非常に多く、next/font でビルド時に取得すると
+// Vercel のビルドで Google Fonts へのリクエストが失敗するため、ブラウザ側で読み込む
+const JP_FONTS_URL =
+  "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -44,11 +35,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body
-        className={`${notoSansJP.variable} ${shippori.variable} ${cormorant.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="stylesheet" href={JP_FONTS_URL} />
+      </head>
+      <body className={`${cormorant.variable} antialiased`}>{children}</body>
     </html>
   );
 }

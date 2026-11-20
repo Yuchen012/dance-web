@@ -8,5 +8,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-noto-sans-jp), "Hiragino Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Noto Sans JP", "Hiragino Sans", "Helvetica Neue", Arial, sans-serif;
 }
