@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f3ec;
-  --foreground: #2a2622;
+  --background: #fff5fa;
+  --foreground: #5a4a6b;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Noto Sans JP", "Hiragino Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "M PLUS Rounded 1c", "Hiragino Sans", "Helvetica Neue", Arial, sans-serif;
 }

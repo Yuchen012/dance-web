@@ -1,19 +1,10 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-// 日本語フォントはファイル数が非常に多く、next/font でビルド時に取得すると
-// Vercel のビルドで Google Fonts へのリクエストが失敗するため、ブラウザ側で読み込む
-const JP_FONTS_URL =
-  "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap";
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
+// Google Fonts は next/font でビルド時に取得すると Vercel のビルドで
+// リクエストが失敗することがあるため、ブラウザ側で読み込む
+const FONTS_URL =
+  "https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Dancing+Script:wght@600&display=swap";
 
 export const metadata: Metadata = {
   title: "Studio Anne | 山梨県甲府市のダンススタジオ",
@@ -38,9 +29,9 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="stylesheet" href={JP_FONTS_URL} />
+        <link rel="stylesheet" href={FONTS_URL} />
       </head>
-      <body className={`${cormorant.variable} antialiased`}>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
