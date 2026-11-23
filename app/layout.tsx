@@ -7,13 +7,13 @@ const FONTS_URL =
   "https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Dancing+Script:wght@600&display=swap";
 
 export const metadata: Metadata = {
-  title: "Studio Anne | 山梨県甲府市のダンススタジオ",
+  title: "Studio Anne | 甲府市のピラティス・ダンス・バレエ教室",
   description:
-    "ジャズダンス・ピラティス・モダンバレエ入門！音楽にのって楽しく身体を動かしながら体力・筋力・柔軟性・バランス感覚の向上を目指します。ピラティスでは美しい姿勢、しっかりした体幹を！",
+    "何歳になっても自分らしく動ける身体を。山梨県甲府市小瀬町のStudio Anneでは、ピラティス・ダンス（ジャズダンス）・バレエ（モダンバレエ）を通して、幼児からシニアまですべての世代の健康を身体づくりから応援します。親子クラス・パーソナルレッスンもあります。",
   openGraph: {
-    title: "Studio Anne | 山梨県甲府市のダンススタジオ",
+    title: "Studio Anne | 甲府市のピラティス・ダンス・バレエ教室",
     description:
-      "ジャズダンス・ピラティス・モダンバレエ入門！音楽にのって楽しく身体を動かしながら体力・筋力・柔軟性・バランス感覚の向上を目指します。ピラティスでは美しい姿勢、しっかりした体幹を！",
+      "何歳になっても自分らしく動ける身体を。山梨県甲府市小瀬町のStudio Anneでは、ピラティス・ダンス（ジャズダンス）・バレエ（モダンバレエ）を通して、幼児からシニアまですべての世代の健康を身体づくりから応援します。親子クラス・パーソナルレッスンもあります。",
     type: "website",
     url: "https://studio-anne.net",
   },
